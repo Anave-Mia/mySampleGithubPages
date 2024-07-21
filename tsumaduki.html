@@ -3,6 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <title>プロつま</title>
+    <link rel="stylesheet" type="text/css" href="css/tsumaduki.css" />
+    <script 
+        src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+        crossorigin="anonymous">
+    </script>
 </head>
 <body>
     <header>
@@ -22,29 +28,41 @@
     </header>
     <main>
         <h2>つまづき</h2>
-        <form>
+        <form name="serch-erea-form" method="GET" action="">
             <h3>検索エリア</h3>
             <div>
-                <h4>ISBN</h4>
+                <h4 id="serch-erea-title-isbn">ISBN</h4>
                 <p>
-                    <input type="number" maxlength="3">
+                    <input id="serch-erea-isbn-1" type="number" min="0" max="999">
                     -
-                    <input type="number" maxlength="1">
+                    <input id="serch-erea-isbn-2" type="number" min="0" max="9">
                     -
-                    <input type="number" maxlength="4">
+                    <input id="serch-erea-isbn-3" type="number" min="0" max="9999">
                     -
-                    <input type="number" maxlength="4">
+                    <input id="serch-erea-isbn-4" type="number" min="0" max="0000">
                     -
-                    <input type="number" maxlength="1">    
+                    <input id="serch-erea-isbn-5" type="number" min="0" max="9">    
                 </p>
+                <input type="submit" value="検索">
             </div>
-            
-
+            <div>
+                <h4 id="serch-erea-titleserch-">キーワード</h4>
+                <p>
+                    <input id="serch-erea-keyword" type="test" maxlength="255">
+                </p>
+                <input type="submit" value="検索">
+            </div>
+            <div>
+                <h4 id="serch-erea-titleserch-">キーワード</h4>
+                <p>
+                    <input id="serch-erea-keyword" type="test" maxlength="255">
+                </p>
+                <input type="submit" value="検索">
+            </div>
         </form>
         
     </main>
 
     <footer></footer>
-    
 </body>
 </html>
