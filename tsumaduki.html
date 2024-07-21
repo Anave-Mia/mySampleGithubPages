@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <title>プロつま</title>
-    <link rel="stylesheet" type="text/css" href="css/tsumaduki.css" />
     <script 
         src="https://code.jquery.com/jquery-3.7.1.js" 
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
@@ -27,42 +26,54 @@
         </div>
     </header>
     <main>
-        <h2>つまづき</h2>
-        <form name="serch-erea-form" method="GET" action="">
+        <h2 class="">つまづき</h2>
+        <!-- <form name="search-erea-form" method="GET" action="">
             <h3>検索エリア</h3>
             <div>
-                <h4 id="serch-erea-title-isbn">ISBN</h4>
-                <p>
-                    <input id="serch-erea-isbn-1" type="number" min="0" max="999">
-                    -
-                    <input id="serch-erea-isbn-2" type="number" min="0" max="9">
-                    -
-                    <input id="serch-erea-isbn-3" type="number" min="0" max="9999">
-                    -
-                    <input id="serch-erea-isbn-4" type="number" min="0" max="0000">
-                    -
-                    <input id="serch-erea-isbn-5" type="number" min="0" max="9">    
-                </p>
-                <input type="submit" value="検索">
+                <h4 id="search-erea-title-isbn"><span>^^ISBN^^</span></h4>
+                <div class="input-submit-set">
+
+                    <p>
+                        <input id="search-erea-isbn-1" type="number" min="0" max="999">
+                        -
+                        <input id="search-erea-isbn-2" type="number" min="0" max="9">
+                        -
+                        <input id="search-erea-isbn-3" type="number" min="0" max="9999">
+                        -
+                        <input id="search-erea-isbn-4" type="number" min="0" max="0000">
+                        -
+                        <input id="search-erea-isbn-5" type="number" min="0" max="9">    
+                    </p>
+                    <input type="submit" value="検索">
+                </div>
             </div>
             <div>
-                <h4 id="serch-erea-titleserch-">キーワード</h4>
-                <p>
-                    <input id="serch-erea-keyword" type="test" maxlength="255">
-                </p>
-                <input type="submit" value="検索">
+                <h4 id="search-erea-title-keyword"><span>^^キーワード^^</span></h4>
+                <div class="input-submit-set">
+                    <p>
+                        <input id="search-erea-keyword" type="test" maxlength="255">
+                    </p>
+                    <input type="submit" value="検索">
+                </div>
             </div>
-            <div>
-                <h4 id="serch-erea-titleserch-">キーワード</h4>
-                <p>
-                    <input id="serch-erea-keyword" type="test" maxlength="255">
-                </p>
-                <input type="submit" value="検索">
-            </div>
-        </form>
+        </form> -->
+        <ul>
+            <li>
+                <a href="/tsumaduki/JunitJissennNyuumonn/booktop.html">
+                    Junit実戦入門
+                </a>
+            </li>
+            <li>
+                <a href="/tsumaduki/DamyNuumonn/booktop.html">
+                    DAMY
+                </a>
+            </li>
+
+        </ul>
         
     </main>
 
     <footer></footer>
+    <script src="js/tsumaduki.js"></script>
 </body>
 </html>
