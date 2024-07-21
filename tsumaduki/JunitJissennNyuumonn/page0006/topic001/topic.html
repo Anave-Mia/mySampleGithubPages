@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>プロつま</title>
+    <link rel="stylesheet" type="text/css" href="css/tsumaduki.css" />
+    <script 
+        src="https://code.jquery.com/jquery-3.7.1.js" 
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
+        crossorigin="anonymous">
+    </script>
+</head>
+<body>
+    <header>
+        <div id="siteTitle">
+            <h1>
+                <span>プログラミング学習参考書つまづき集</span>
+            </h1>
+        </div>
+        <div id="toMenu">
+            <ul>
+                <li><a href="../../../../../index.html">ホーム</a></li>
+                <li><a href="../../../../../about.html">このサイトについて</a></li>
+                <li>つまづき</li>
+                <li><a href="../../../../../contact.html">問い合わせ</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <h2 class="content-chain-display">
+            <span class="menu">
+                つまづき
+            </span>
+            <span> > </span>
+            <span class="book">
+                Junit実戦入門
+            </span>
+            <span> > </span>
+            <span class="page">
+                p6
+            </span>
+            <span> > </span>
+            <span class="topic">
+                Junit-4.13.2.jarで実行するとjava.lang.NoClassDefFoundError
+            </span>
+        </h2>
+    </main>
+    <hr>
+    <section class="real">
+        <h3>環境</h3>
+        <ul>
+            <li>OS:</li>
+            <li>IDE:eclipse</li>
+        </ul>
+    </section>
+    <hr>
+    <section class="real">
+        <h3>起きたこと</h3>
+        <p>
+            p6
+            <br>
+            「ライブラリの追加」を読んで、http://www.junint.org/からJunit-4.13.2.jarをダウンロードした。
+            <br>
+            それを[ビルド・パスに追加]によって、参照ライブラリーに追加した。
+            <br>
+            p11
+            <br>
+            Junitテストを実行すると、障害トレースの1行目に
+            <br>
+            java.lang.NoClassDefFoundErrorが表示された。
+        </p>
+    </section>
+    <hr>
+    <section class="problem">
+        <h3>問題点</h3>
+        <p>
+            p12
+            <br>
+            障害トレースの1行目に表示されるはずのメッセージは
+            <br>
+            java.lang.NoClassDefFoundErrorではない。
+            <br>
+        </p>
+    </section>
+    <hr>
+    <section class="cause">
+        <h3>原因</h3>
+        <p>
+            おそらく、Junit-4.13.2.jarにはp6のコラムで言及されているHamcrestが含まれていない。
+            <br>
+        </p>
+    </section>
+    <hr>
+    <section class="solution">
+        <h3>解決策</h3>
+        <p>
+            eclipseの「パッケージエクスプローラー」にて、
+            <br>
+            プロジェクトフォルダ（「Junit-tutorial」）を右クリック
+            <br>
+            ->右クリックメニューの「プロパティ」をクリック
+            <br>
+            ->「Junit-tutorialのプロパティ」ウィンドウの「ライブラリ」タブをクリック
+            <br>
+            ->「Junit-tutorialのプロパティ」ウィンドウの「ライブラリ」タブの「クラスパス」を選択
+            <br>
+            ->「Junit-tutorialのプロパティ」ウィンドウの「ライブラリ」タブの「ライブラリーの追加」をクリック
+            <br>
+            ->「ライブラリーの追加」ウィンドウの「Junit」を選択し「次へ＞」をクリック
+            <br>
+            ->「Junit ライブラリー・バージョン」のプルダウンの「Junit4」を選択し「完了」をクリック
+            <br>
+            ->「Junit-tutorialのプロパティ」ウィンドウの「ライブラリ」タブの「クラスパス」直下に
+            <br>
+            「Junit4」が追加されている。
+            <br>
+            ->「Junit-tutorialのプロパティ」ウィンドウの「適用して閉じる」をクリック
+            <br>
+            プロジェクトフォルダ（「Junit-tutorial」）直下に「Junit4」フォルダが追加されている。
+            <br>
+            ->この状態でJunitテストを実行すると、p12の通りになる。
+        </p>
+        
+    </section>
+    <hr>
+    <footer></footer>
+</body>
+</html>
